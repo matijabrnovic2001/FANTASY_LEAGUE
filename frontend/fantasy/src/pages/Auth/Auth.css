@@ -1,0 +1,220 @@
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--space-xl);
+
+    background:
+            radial-gradient(
+                    circle at top,
+                    rgba(0, 214, 180, 0.16) 0%,
+                    transparent 34%
+            ),
+            linear-gradient(
+                    180deg,
+                    var(--color-nav-bg-soft) 0%,
+                    var(--color-nav-bg) 52%,
+                    #06111d 100%
+            );
+
+    color: var(--color-nav-text);
+    font-family: var(--font-main);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 34px 30px;
+
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(0, 214, 180, 0.24);
+
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.1) 0%,
+                    rgba(255, 255, 255, 0.055) 100%
+            ),
+            var(--color-nav-bg-soft);
+
+    color: var(--color-nav-text);
+
+    box-shadow:
+            0 24px 60px rgba(5, 12, 22, 0.42),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.auth-card h1 {
+    margin: 0;
+
+    padding: 20px 10px 8px;
+
+    text-align: center;
+
+    color: var(--color-turquoise-soft);
+
+    font-family: var(--font-title);
+    font-size: 32px;
+}
+
+.auth-subtitle {
+    margin-bottom: 26px;
+
+    text-align: center;
+    font-size: 18px;
+
+    color: var(--color-nav-muted);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.auth-field label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--color-turquoise-soft);
+}
+
+.auth-field input {
+    width: 100%;
+    height: auto;
+
+    padding: 12px 14px;
+
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(0, 214, 180, 0.22);
+
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.12) 0%,
+                    rgba(255, 255, 255, 0.07) 100%
+            );
+
+    color: var(--color-nav-text);
+    font-family: var(--font-main);
+
+    outline: none;
+
+    transition:
+            border-color 0.2s ease,
+            background-color 0.2s ease,
+            filter 0.2s ease;
+}
+
+.auth-field input:focus {
+    border-color: rgba(0, 214, 180, 0.55);
+    background-color: rgba(255, 255, 255, 0.12);
+    filter: brightness(1.04);
+}
+
+.auth-field input::placeholder {
+    color: rgba(244, 255, 252, 0.42);
+}
+
+.auth-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 8px;
+}
+
+.auth-submit-btn input {
+    width: 100%;
+
+    margin-top: 8px;
+    padding: 13px 16px;
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    background:
+            linear-gradient(
+                    135deg,
+                    var(--color-turquoise) 0%,
+                    #73f7df 100%
+            );
+
+    color: #06211d;
+
+    font-family: var(--font-title);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    box-shadow: 0 14px 28px rgba(0, 214, 180, 0.24);
+
+    transition:
+            transform 0.2s ease,
+            filter 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.auth-submit-btn input:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+    box-shadow: 0 16px 32px rgba(0, 214, 180, 0.3);
+}
+
+.auth-toggle-btn {
+    width: 100%;
+
+    margin-top: 18px;
+
+    border: none;
+    background-color: transparent;
+
+    color: var(--color-nav-muted);
+
+    font-family: var(--font-main);
+
+    cursor: pointer;
+
+    transition:
+            color 0.2s ease,
+            text-decoration-color 0.2s ease;
+}
+
+.auth-toggle-btn:hover {
+    color: var(--color-turquoise-soft);
+    text-decoration: underline;
+}
+
+.auth-error,
+.auth-success {
+    padding: 10px 12px;
+    margin-bottom: 16px;
+
+    border-radius: var(--radius-sm);
+
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-error {
+    background-color: rgba(220, 38, 38, 0.16);
+    border: 1px solid rgba(248, 113, 113, 0.34);
+    color: #fecaca;
+}
+
+.auth-success {
+    background-color: rgba(0, 214, 180, 0.14);
+    border: 1px solid rgba(0, 214, 180, 0.34);
+    color: var(--color-turquoise-soft);
+}

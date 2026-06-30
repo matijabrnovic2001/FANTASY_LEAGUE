@@ -1,0 +1,103 @@
+.player-mini-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.player-mini-card:hover {
+    cursor: pointer;
+}
+
+.player-headshot {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-deep);
+    border-radius: var(--radius-round);
+    object-fit: cover;
+    border: 2px solid var(--color-accent-green);
+}
+
+.table-container {
+    width: 94vw;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(
+            180deg,
+            var(--color-surface-white) 0%,
+            var(--color-surface) 45%,
+            var(--color-surface-soft) 100%
+    );
+    border: var(--border-dark);
+    box-shadow: var(--shadow-card);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    color: var(--color-text-dark);
+}
+
+thead {
+    background: linear-gradient(
+            90deg,
+            var(--color-bg-navy) 0%,
+            var(--color-bg-dark) 55%,
+            var(--color-bg-deep) 100%
+    );
+    color: var(--color-text-light);
+    font-family: "Titling Gothic Wide", Arial, sans-serif;
+}
+
+th {
+    padding: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    border: none;
+    color: var(--color-text-light);
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(16, 47, 43, 0.12);
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+}
+
+tbody tr {
+    background: linear-gradient(
+            90deg,
+            var(--color-surface-white) 0%,
+            var(--color-surface) 60%,
+            var(--color-surface-soft) 100%
+    );
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: linear-gradient(
+            90deg,
+            var(--color-surface) 0%,
+            var(--color-surface-soft) 60%,
+            var(--color-surface-strong) 100%
+    );
+}
+
+tbody tr:hover {
+    background: linear-gradient(
+            90deg,
+            #eef8f0 0%,
+            #dff0e5 55%,
+            #cfe7dc 100%
+    );
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+th,
+td {
+    text-align: left;
+}

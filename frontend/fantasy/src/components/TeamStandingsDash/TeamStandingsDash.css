@@ -1,0 +1,11 @@
+.team-standings-dash {
+    width: 94vw;
+    display: flex;
+    align-items: left;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.team-standings-dash select:focus {
+    border-color: #1e9b63;
+}

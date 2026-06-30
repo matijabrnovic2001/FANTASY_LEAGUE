@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Titling Gothic Wide';
+    src: url('/fonts/TitlingGothicFBWide-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Titling Gothic Regular';
+    src: url('/fonts/TitlingGothicFBNor-Reg.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titling Gothic Thin';
+    src: url('/fonts/TitlingGothicFBNor-Thin.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}

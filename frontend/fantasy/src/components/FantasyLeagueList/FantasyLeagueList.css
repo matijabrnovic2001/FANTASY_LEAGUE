@@ -1,0 +1,24 @@
+.official-badge {
+    margin-left: var(--space-md);
+    padding: 4px 8px;
+    border-radius: var(--radius-round);
+    background: var(--color-accent-orange);
+    color: var(--color-text-light);
+    font-size: var(--space-sm);
+    cursor: help;
+}
+
+.community-badge {
+    margin-left: var(--space-md);
+    padding: 4px 8px;
+    border-radius: var(--radius-round);
+    background: var(--color-accent-turquoise);
+    color: var(--color-text-light);
+    font-size: var(--space-sm);
+    cursor: help;
+}
+
+.join-button {
+    background-color: var(--color-bg-navy);
+    color: var(--color-text-light);
+}

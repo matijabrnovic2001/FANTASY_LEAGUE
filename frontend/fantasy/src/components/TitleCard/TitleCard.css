@@ -1,0 +1,15 @@
+.title-card {
+    background-color: var(--color-turquoise);
+    color: #06211d;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    font-family: var(--font-title);
+    padding: 24px 32px;
+
+    border-bottom: 1px solid rgba(6, 33, 29, 0.18);
+
+    box-shadow: 0 12px 28px rgba(0, 214, 180, 0.22);
+}

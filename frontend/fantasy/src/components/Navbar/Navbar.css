@@ -1,0 +1,231 @@
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+    padding: 0.75rem 2rem;
+
+    color: var(--color-nav-text);
+    background-color: var(--color-nav-bg);
+
+    border-bottom: 1px solid var(--color-nav-border);
+    box-shadow: var(--shadow-nav);
+
+    font-family: var(--font-title);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.navbar-logo img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
+}
+
+.navbar-logo:hover img {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-link,
+.fantasy-menu-trigger,
+.navbar-mod-panel-button {
+    position: relative;
+
+    border: none;
+    background-color: transparent;
+
+    color: var(--color-nav-text);
+
+    font-family: var(--font-title);
+    font-size: inherit;
+    font-weight: 100;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+}
+
+.navbar-link:visited {
+    color: var(--color-nav-text);
+}
+
+.navbar-link::after,
+.fantasy-menu-trigger::after,
+.navbar-mod-panel-button::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+
+    height: 2px;
+
+    background-color: var(--color-accent-deep-orange);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.2s ease;
+}
+
+.navbar-link:hover,
+.fantasy-menu-trigger:hover,
+.navbar-mod-panel-button:hover {
+    color: var(--color-turquoise-soft);
+    transform: translateY(-1px);
+}
+
+.navbar-link:hover::after,
+.fantasy-menu-trigger:hover::after,
+.navbar-mod-panel-button:hover::after {
+    transform: scaleX(1);
+}
+
+.fantasy-menu {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar-auth {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar-auth .navbar-link,
+.open-menu-btn {
+    padding: 0.7rem 1.4rem;
+
+    border: 1px solid rgba(0, 214, 180, 0.28);
+    border-radius: var(--radius-sm);
+
+    color: var(--color-nav-text);
+    background-color: var(--color-turquoise-muted);
+
+    font-family: var(--font-main);
+    font-weight: 700;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+            transform 0.2s ease,
+            filter 0.2s ease,
+            background-color 0.2s ease,
+            border-color 0.2s ease;
+}
+
+.navbar-auth .navbar-link::after {
+    display: none;
+}
+
+.navbar-auth .navbar-link:hover,
+.open-menu-btn:hover {
+    color: var(--color-nav-text);
+    background-color: rgba(0, 214, 180, 0.22);
+    border-color: rgba(0, 214, 180, 0.45);
+
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-menu-dropdown,
+.fantasy-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+
+    min-width: 170px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 8px;
+
+    background-color: var(--color-nav-bg-soft);
+
+    border: 1px solid var(--color-nav-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-dropdown);
+
+    z-index: 3000;
+}
+
+.user-menu-dropdown {
+    right: 0;
+}
+
+.fantasy-dropdown {
+    left: 0;
+    min-width: 160px;
+}
+
+.user-menu-dropdown button,
+.fantasy-dropdown button {
+    padding: 10px 12px;
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    background-color: transparent;
+    color: var(--color-nav-muted);
+
+    font-family: inherit;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+            background-color 0.2s ease,
+            color 0.2s ease;
+}
+
+.user-menu-dropdown button:hover,
+.fantasy-dropdown button:hover {
+    background-color: var(--color-turquoise-muted);
+    color: var(--color-turquoise-soft);
+}
+
+.user-menu-dropdown .logout-option {
+    color: #ffb4a8;
+}
+
+.user-menu-dropdown .logout-option:hover {
+    background-color: rgba(255, 80, 80, 0.14);
+    color: #ffcdc5;
+}

@@ -1,0 +1,16 @@
+.player-table-dash {
+    width: 94vw;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: var(--space-sm);
+}
+
+.player-table-dash input {
+    min-width: 260px;
+}
+
+.player-table-dash input:focus,
+.player-table-dash select:focus {
+    border-color: #1e9b63;
+}

@@ -1,0 +1,131 @@
+.mod-panel-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(3, 8, 18, 0.68);
+}
+
+.mod-panel-modal {
+    width: min(1100px, 90vw);
+    max-height: 82vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+
+    background-color: #ffffff;
+
+    font-family: var(--font-main);
+}
+
+.mod-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+
+    padding: 24px 26px;
+
+    color: var(--color-text-light);
+    background-color: var(--color-nav-bg);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mod-panel-header h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.mod-panel-header p {
+    margin: 8px 0 0;
+
+    color: var(--color-muted-light);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mod-panel-close {
+    border: none;
+    background-color: transparent;
+
+    color: var(--color-muted-light);
+
+    font-size: 34px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+}
+
+.mod-panel-close:hover {
+    color: var(--color-text-light);
+    transform: translateY(-1px);
+}
+
+.mod-panel-content {
+    flex: 1;
+    min-height: 420px;
+    max-height: 620px;
+
+    overflow-y: auto;
+
+    padding: 24px;
+
+    background-color: #ffffff;
+}
+
+.mod-panel-bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+
+    border-top: var(--border-dark);
+
+    background-color: var(--color-surface);
+}
+
+.mod-panel-nav-item {
+    height: 44px;
+
+    border: none;
+    border-right: var(--border-dark);
+
+    background-color: var(--color-surface);
+    color: var(--color-muted-dark);
+
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+            background-color 0.18s ease,
+            color 0.18s ease;
+}
+.mod-panel-nav-item:hover {
+    background-color: var(--color-surface-soft);
+    color: var(--color-text-dark);
+}
+
+.mod-panel-nav-item.active {
+    background-color: #ffffff;
+    color: var(--color-text-dark);
+}

@@ -1,0 +1,254 @@
+.fantasy-player-list {
+    font-family: var(--font-main);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--space-md) * 0.7);
+
+    padding: calc(var(--space-lg) * 0.6);
+
+    color: var(--color-text-dark);
+
+    border-radius: var(--radius-lg);
+    border: var(--border-dark);
+
+    background-color: var(--color-surface);
+    box-shadow: 0 18px 36px rgba(5, 12, 22, 0.18);
+}
+
+.fpl-section {
+    width: 100%;
+}
+
+.fpl-section h1 {
+    margin: 0;
+
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+
+.fpl-section p {
+    margin: calc(var(--space-xs) * 0.7) 0 0;
+
+    font-size: 0.75rem;
+    color: var(--color-muted-dark);
+}
+
+.fpl-section label {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 0.7rem;
+    color: var(--color-muted-dark);
+}
+
+.fpl-section input,
+.fpl-section select {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+}
+
+.fpl-section input:focus,
+.fpl-section select:focus {
+    border-color: var(--color-accent-turquoise);
+    filter: brightness(98%);
+}
+
+.fpl-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.player-role-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(16, 35, 52, 0.08);
+
+    background-color: var(--color-surface-white);
+
+    box-shadow: 0 12px 24px rgba(5, 12, 22, 0.12);
+}
+
+.player-role-group {
+    overflow: hidden;
+
+    border-radius: 0;
+    border-bottom: 1px solid rgba(16, 35, 52, 0.1);
+
+    background-color: transparent;
+    color: var(--color-text-dark);
+}
+
+.player-role-group:last-child {
+    border-bottom: none;
+}
+
+.player-role-mini-header {
+    display: grid;
+    grid-template-columns: 1fr 54px 54px 34px;
+    align-items: center;
+    gap: calc(var(--space-md) * 0.7);
+
+    padding: 10px 12px 8px;
+
+    border-bottom: 1px solid rgba(16, 35, 52, 0.1);
+
+    background-color: #edf4fa;
+}
+
+.player-role-mini-header h2 {
+    margin: 0;
+
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+}
+
+.player-role-mini-header span {
+    text-align: center;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    color: var(--color-muted-dark);
+}
+
+.player-role-group ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.player-list-item {
+    display: grid;
+    grid-template-columns: 1fr 54px 54px 34px;
+    align-items: center;
+    gap: calc(var(--space-md) * 0.7);
+
+    padding: 8px 12px;
+
+    background-color: var(--color-surface-white);
+    border-bottom: 1px solid rgba(16, 35, 52, 0.08);
+}
+
+.player-list-item:nth-child(even) {
+    background-color: #f1f6fb;
+}
+
+.player-list-item:last-child {
+    border-bottom: none;
+}
+
+.player-main-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 0;
+    padding-right: calc(var(--space-md) * 0.7);
+
+    border-right: 1px solid rgba(16, 35, 52, 0.12);
+}
+
+.player-headshot {
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.player-text-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.player-text-info strong {
+    font-size: 0.75rem;
+    color: var(--color-text-dark);
+
+    white-space: nowrap;
+}
+
+.player-sub-info {
+    display: flex;
+    gap: calc(var(--space-sm) * 0.7);
+
+    font-size: 0.65rem;
+    color: var(--color-muted-dark);
+}
+
+.player-price,
+.player-metric {
+    text-align: center;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    color: var(--color-text-dark);
+}
+
+.add-player-button {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: var(--radius-round);
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    line-height: 1;
+
+    color: var(--color-text-light);
+    background-color: #12304a;
+
+    box-shadow: 0 6px 12px rgba(5, 12, 22, 0.16);
+
+    transition:
+            background-color 0.2s ease,
+            opacity 0.2s ease,
+            filter 0.2s ease,
+            transform 0.2s ease;
+}
+
+.add-player-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    filter: brightness(95%);
+}
+
+.add-player-button span {
+    display: inline-block;
+
+    transform: rotate(0deg);
+    transition: transform 0.25s ease;
+}
+
+.add-player-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    filter: grayscale(0.3);
+}
+
+.add-player-button.is-added {
+    background-color: rgba(18, 48, 74, 0.25);
+    color: var(--color-text-dark);
+}
+
+.add-player-button.is-added span {
+    transform: rotate(45deg);
+}
